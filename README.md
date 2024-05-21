@@ -9,7 +9,7 @@ Este proyecto implementa un ambiente con tres contenedores que ofrecen servicios
 
 1. Clona el repositorio:
     ```sh
-    git clone <URL-del-repositorio>
+    git clone https://github.com/JaymedDLC/DockerCompose-G3
     cd proyecto-docker-compose
     ```
 

@@ -17,7 +17,6 @@ def get_note(student_id):
     if note:
         return jsonify({"student_id": student_id, "note": note}), 200
     return jsonify({"message": "Note not found"}), 404
-
 @app.route('/notes/<student_id>', methods=['PUT'])
 def update_note(student_id):
     data = request.get_json()
