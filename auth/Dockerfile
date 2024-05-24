@@ -1,18 +1,13 @@
-# Utiliza una imagen base de Python
-FROM python:3.9-slim
+FROM node:14
 
-# Establece el directorio de trabajo en /app
-WORKDIR /app
+WORKDIR /usr/src/app
 
-# Copia el archivo de requisitos y el código de la aplicación
-COPY requirements.txt requirements.txt
-COPY app.py app.py
+COPY package*.json ./
 
-# Instala las dependencias
-RUN pip install -r requirements.txt
+RUN npm install
 
-# Expone el puerto 5000
-EXPOSE 5000
+COPY . .
 
-# Define el comando de ejecución
-CMD ["python", "app.py"]
+EXPOSE 3000
+
+CMD ["node", "server.js"]

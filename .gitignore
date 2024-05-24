@@ -1,0 +1,9 @@
+# Node modules
+node_modules/
+
+# Package lock files
+package-lock.json
+
+# Miscellaneous
+.DS_Store
+
